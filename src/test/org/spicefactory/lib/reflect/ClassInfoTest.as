@@ -148,7 +148,7 @@ public class ClassInfoTest {
 		assertThat(ApplicationDomain.currentDomain.hasDefinition("org.spicefactory.lib.reflect.domain.ClassInChildDomain"), 
 				equalTo(false));
 		var loader:Loader = new Loader();
-		loader.load(new URLRequest("domain.swf"));
+		loader.load(new URLRequest("swf/domain.swf"));
 		loader.contentLoaderInfo.addEventListener(Event.COMPLETE, Async.asyncHandler(this, onTestApplicationDomain, 3000));
 	}
 	
