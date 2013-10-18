@@ -55,13 +55,7 @@
 						<keepAs3Metadata>Event</keepAs3Metadata>
 					</keepAs3Metadatas>
 					<includeTestFiles>
-		              <param>ClassInfoTest.as</param>
-		              <param>ConstructorTest.as</param>
-		              <param>ConverterTest.as</param>
-		              <param>DeclaredByTest.as</param>
-		              <param>MetadataTest.as</param>
-		              <param>MethodTest.as</param>
-		              <param>PropertyTest.as</param>
+		              <param>ReflectionSuite.as</param>
 		            </includeTestFiles>
                 </configuration>
                 <executions>
