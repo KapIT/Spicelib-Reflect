@@ -77,6 +77,7 @@ public class MetadataRegistry {
 	 * @private
 	 */
 	internal  function getMapping (name:String, type:String) : MetadataMapping {
+		if (!initialized) initialize();
 		return metadataClasses[name + " " + type] as MetadataMapping;
 	}
 	
