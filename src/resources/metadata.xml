@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<annotations version="1.0">
+
+	<metadata name="AssignableTo" description="A metadata tag that may be used on properties of type Class or ClassInfo in mapped metadata classes. 
+											   For these properties the corresponding attributes in metadata tags will be evaluated and must resolve 
+											   to a Class or ClassInfo instance that is assignable to the type specified on this metadata tag. " >
+		<context name="variable" />
+		<context name="setter" />
+		<context name="getter" />
+		
+		<attribute name="type" type="String" showHint="false"
+				description=" The type the property must be assignable to."  />
+			
+       	<attribute type="String" required="true" hint="classes" 
+				description=" The type the property must be assignable to."  />
+	</metadata>
+	
+	
+	<metadata name="Metadata" description="A metadata tag that marks a class as a mapped metadata class.
+										   These classes can be registered with Metadata.registerMetadataClass
+										   For any mapped metadata class metadata tags in AS3 classes will be mapped to instances
+										   of that class, automatically mapping metadata attributes to properties of the mapped class
+	                                       including automatic type conversion if necessary." >
+		<context name="class" />
+		
+		
+		
+		<attribute name="types" type="Array"  required="false"
+				values="class, property, method"
+				description=" The types for which this Metadata tag should be processed.  
+							 Valid values are class, constructor, property or method. If not specified
+		 					 the metadata is processed for all types. For other types the
+		 	    			 metadata will be represented by the generic Metadata
+		 	    			 class and not be mapped to a custom class."/>
+	 	    			 
+	 	<attribute name="name" required="false" description="The name of the metadata tag. If not specified the name is the non-qualifed class name of the mapped class." />
+	 	
+	 	<attribute name="multiple" type="Boolean" defaultValue="false" required="false" 
+	 			description=" Determines whether the mapped metadata tag is allowed to appear multiple times on the same element."/>
+	 			
+		<attribute name="strict" type="Boolean" defaultValue="true" required="false" 
+	 			description=" Determines whether the mapped metadata tag should cause an Error to be thrown 
+	 						 when it contains one or more attributes that do not map to a property of the mapped class. "/>
+	</metadata>
+	
+	
+	<metadata name="Required" description="A metadata tag that marks a property as required" >
+		<context name="variable" />
+		<context name="setter" />
+		<context name="getter" />
+		
+	</metadata>
+	
+	<metadata name="Target" description="A metadata tag that can be used in metadata configuration extensions.
+										 For any extension tag that can be place on properties or methods the framework will
+										 automatically set the value of the property marked with this tag to the name of
+										 the annotated method or property." >
+		<context name="variable" />
+		<context name="setter" />
+		<context name="getter" />
+		
+	</metadata>
+	
+</annotations>

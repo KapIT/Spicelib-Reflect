@@ -17,6 +17,11 @@
     <build>
         <sourceDirectory>src/main</sourceDirectory>
         <testSourceDirectory>src/test</testSourceDirectory>
+        <resources>
+        	<resource>
+        		<directory>src/resources</directory>
+        	</resource>
+        </resources>
         <plugins>
             <plugin>
                 <groupId>org.sonatype.flexmojos</groupId>
@@ -54,6 +59,11 @@
 						<keepAs3Metadata>AssignableTo</keepAs3Metadata>
 						<keepAs3Metadata>Event</keepAs3Metadata>
 					</keepAs3Metadatas>
+					
+					<includeFiles>
+            		 	<include>metadata.xml</include>
+            		</includeFiles>
+					
 					<includeTestFiles>
 		              <param>ReflectionSuite.as</param>
 		            </includeTestFiles>
